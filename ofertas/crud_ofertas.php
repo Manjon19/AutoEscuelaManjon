@@ -1,7 +1,7 @@
 <?php
 // incluye la clase Db
-include_once ($_SERVER['DOCUMENT_ROOT'].'/AutoEscuelaManjonTest/componentes/conexion.php');
-include_once $_SERVER['DOCUMENT_ROOT'].'/AutoEscuelaManjonTest/profesores/Profesor.php';
+include_once ($_SERVER['DOCUMENT_ROOT'].'/AutoEscuelaManjon/componentes/conexion.php');
+include_once $_SERVER['DOCUMENT_ROOT'].'/AutoEscuelaManjon/profesores/Profesor.php';
 	class CrudOfertas {
 		// constructor de la clase
 		public function __construct(){}

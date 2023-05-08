@@ -1,7 +1,7 @@
 <?php
 //incluye la clase Usuario y CrudUsuario
-require_once $_SERVER['DOCUMENT_ROOT'].'/AutoEscuelaManjonTest/usuarios/crud_usuarios.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/AutoEscuelaManjonTest/usuarios/Usuario.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/AutoEscuelaManjon/usuarios/crud_usuarios.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/AutoEscuelaManjon/usuarios/Usuario.php';
  
 $crud= new CrudUsuario();
 $usuario= new Usuario();

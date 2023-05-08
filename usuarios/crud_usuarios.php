@@ -1,6 +1,6 @@
 <?php
 // incluye la clase Db
-include_once ($_SERVER['DOCUMENT_ROOT'].'/AutoEscuelaManjonTest/componentes/conexion.php');
+include_once ($_SERVER['DOCUMENT_ROOT'].'/AutoEscuelaManjon/componentes/conexion.php');
  
 	class CrudUsuario {
 		// constructor de la clase
