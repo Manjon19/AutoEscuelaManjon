@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-02-2023 a las 17:43:01
+-- Tiempo de generación: 08-05-2023 a las 20:30:38
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -40,6 +40,7 @@ CREATE TABLE `profesores` (
 --
 
 INSERT INTO `profesores` (`dni`, `nombre`, `precio_practica`, `vehiculo_practica`, `tipo_Carnet`) VALUES
+('0', '', 0, 0, ''),
 ('00000000B', 'Jose Luis', 35, 1, 'B'),
 ('00000000C', 'Tomás', 25, 2, 'B'),
 ('00000000D', 'Jose Antonio', 40, 3, 'B'),
@@ -152,8 +153,9 @@ CREATE TABLE `t_ofertas` (
 --
 
 INSERT INTO `t_ofertas` (`cod_oferta`, `descripcion`, `fecha_limite`, `descuento`, `dni_prof`) VALUES
-(1, 'Debido a que eres una persona nueva, con esta oferta obtendrás un 20 % de descuento en la inscripción si realizas las practicas con el coche mostrado.             ', '2022-12-31', 20, '00000000C'),
-(2, 'Si eliges realizar las practicas con este coche obtendrás un 15% de descuento en tu inscripción!!!', '2022-04-24', 15, '00000000E');
+(0, '        ', NULL, NULL, '0'),
+(1, 'Debido a que eres una persona nueva, con esta oferta obtendrás un 20 % de descuento en la inscripción si realizas las practicas con el coche mostrado.             ', '2023-12-31', 20, '00000000C'),
+(2, 'Si eliges realizar las practicas con este coche obtendrás un 15% de descuento en tu inscripción!!!', '2023-04-24', 15, '00000000E');
 
 -- --------------------------------------------------------
 
@@ -175,7 +177,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`dni`, `nombre`, `contrasena`, `rol`, `oferta`, `dni_profesor`) VALUES
-('00000000A', 'Paco', '$2y$10$GJUDlOwjYxtzsT5lJ2gUZ.jnEQuJN6rYO7c5.EiNgt6L.uw77LfV2', 0, 1, '00000000C'),
+('00000000A', 'Elias', '$2y$10$GJUDlOwjYxtzsT5lJ2gUZ.jnEQuJN6rYO7c5.EiNgt6L.uw77LfV2', 0, 1, '00000000C'),
+('00000000B', 'bibliotecario', '$2y$04$G1.cAxD9OZkQkeDlEMCKuu5gLjc6JhvARQ0/sBf5NRMDVMlRCqHGO', 0, 2, NULL),
 ('53579485L', 'David Manjón Pérez', '$2y$04$EvGpv5VKnyDzWzDStcUjeeVSKQQeScUYS5S0mj/sUmJVJ1wDdJdvO', 1, NULL, '');
 
 -- --------------------------------------------------------
@@ -198,12 +201,13 @@ CREATE TABLE `vehiculos` (
 --
 
 INSERT INTO `vehiculos` (`id`, `tipo`, `marca`, `modelo`, `ref_img`, `carnet_necesario`) VALUES
+(0, '', '', '', '', ''),
 (1, 'Turismo', 'Volkswagen', 'Golf VI', 'golf6.jpg', 'B'),
 (2, 'Turismo', 'Nissan', 'Micra 2019', 'micra.jpg', 'B'),
 (3, 'Turismo', 'Renault', 'Clio 2019', 'clio.jpg', 'B'),
 (4, 'Turismo', 'Renault', 'Megane 2012', 'megane2012.jpg', 'B'),
 (5, 'Camion', 'Man', 'TGL', 'tgl.jpg', 'C'),
-(15, 'Turismo', 'Volkswaggen', 'Golf VII', 'golf_VII.jpg', 'B');
+(6, 'Turismo', 'Volkswaggen', 'Golf VII', 'golf_VII.jpg', 'B');
 
 --
 -- Índices para tablas volcadas
@@ -264,7 +268,7 @@ ALTER TABLE `resultados_test`
 -- AUTO_INCREMENT de la tabla `vehiculos`
 --
 ALTER TABLE `vehiculos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Restricciones para tablas volcadas
