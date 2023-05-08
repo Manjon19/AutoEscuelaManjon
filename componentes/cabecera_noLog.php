@@ -48,6 +48,11 @@
   <div class="col d-flex justify-content-around ">
       <button type="submit" class="btn btn-primary">Iniciar sesión</button>
       <a href="./usuarios/formulario_registro.php" class="btn btn-success">Registrar</a>
+      <script>
+        $("a").click(()=>{
+          document.cookie="oferta="+0+";max-age=3600; path=/";
+        })
+      </script>
     </div>
   
 </div>

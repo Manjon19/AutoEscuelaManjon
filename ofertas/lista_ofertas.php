@@ -48,7 +48,9 @@ $listaOfertas = $crud->mostrar();
 		</thead>
 
 		<tbody>
-			<?php foreach ($listaOfertas as $oferta) { ?>
+			<?php foreach ($listaOfertas as $oferta) { 
+				if ($oferta->getCod_oferta()!=0) {
+				?>
 				<tr>
 					<td><?php echo $oferta->getCod_oferta(); ?></td>
 					<td><?php echo $oferta->getDescripcion(); ?></td>
@@ -66,7 +68,7 @@ $listaOfertas = $crud->mostrar();
 							</svg>Eliminar</a></td>
 				</tr>
 
-			<?php } ?>
+			<?php } } ?>
 			
 		</tbody>
 	</table>
